@@ -8,7 +8,7 @@ for i,ss in enumerate(s):
     if i==0:
         answer=ss
     else:
-        if answer>0:
+        if answer>1 and ss>1:
             answer*=ss
         else:
             answer+=ss
