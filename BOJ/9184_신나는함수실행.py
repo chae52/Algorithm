@@ -15,6 +15,10 @@ def w(a,b,c):
         return dp_table[0][0][0]
     if a>20 or b>20 or c>20:
         return w(20,20,20)
+
+    if dp_table[a][b][c]!=0:
+        return dp_table[a][b][c]
+        
     if a<b and b<c:
         if dp_table[a][b][c]==0:
             dp_table[a][b][c]=w(a,b,c-1) + w(a,b-1,c-1) -w(a,b-1,c)
